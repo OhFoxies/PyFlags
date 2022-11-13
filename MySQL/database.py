@@ -8,7 +8,6 @@ except FileNotFoundError:
     print("Config file not found.")
     input("Press enter to close the program.")
     quit()
-
 create_table = f"CREATE TABLE `{config['MySQL']['database']}`.`userdata` (`player_ID` VARCHAR(19) NOT " \
                f"NULL , `lang` VARCHAR(2) NOT NULL ," \
                f"`flags_lang` VARCHAR(2) NOT NULL , `points` INT NOT NULL , PRIMARY KEY (`player_ID`))"

@@ -24,7 +24,7 @@ async def on_ready():
 
 @bot.slash_command(description="easy mode", dm_permission=True)
 async def easymode(interaction: nextcord.Interaction):
-    gamer = player.Player(player_id=interaction.user.id)
+    gamer = player.Player(player_id=str(interaction.user.id))
     flag = random.choice(gamer.lang_flags)
     view = EasyMode(correct=flag['name'], flags=gamer.lang_flags, player_lang=gamer.lang, flag_code=flag['code'])
     embed = nextcord.Embed(type="rich",
