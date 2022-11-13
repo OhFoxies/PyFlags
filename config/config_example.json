@@ -1,0 +1,5 @@
+{
+  "_comment": "Note that database name can anything you want.",
+  "MySQL": {"host":  "localhost", "username": "root", "password": "Wzium123", "database":  "YourDatabaseName"},
+  "Bot": {"Bot_token":  "token"}
+}

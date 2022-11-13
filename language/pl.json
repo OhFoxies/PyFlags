@@ -1,0 +1,23 @@
+{
+  "lang_change": "Pomyślnie zmieniłeś język.",
+  "lang_change_title": "Zmiana języka",
+  "flag_random": "Wylosowana flaga: ",
+  "flag_lang": "Zmiana języka nazw krai zakończyła się sukcesem",
+  "new_lang": "Nowy język: ",
+  "guess": "Zgadnij co to za flaga. Odpwiedź napisz na chacie",
+  "answers_lang": "Nazwy krai powinneneś podać w języku: ",
+  "good_answer": "Dobra robota! To jest prawidłowa odpowiedź! Otrzymujesz jeden punkt",
+  "bad_answer": "Niestey odpowiedź nie jest prawidłowa!",
+  "timeout": "Czas minął! ",
+  "answer_is": "Prawidłowa odpowiedź to: ",
+  "flag_lang_change": "Od teraz nazwy krai będą się wyświetalały w języku: ",
+  "player_points": "Twoje punkty: ",
+  "player_points_other": "Punkty użytkownika ",
+  "guess_easy": "Zgadnij jakiego kraju jest flaga. Wybierz prawidłową odpowiedź.",
+  "hard_tittle": "Poziom trudny",
+  "zoom": "Powiększ flagę",
+  "good_luck": "Powodzenia!",
+  "easy_tittle": "Poziom łatwy",
+  "good_job": "Powodzenia!",
+  "points": "Punkty!??!?!"
+}

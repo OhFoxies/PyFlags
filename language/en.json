@@ -1,0 +1,23 @@
+{
+  "lang_change": "You have succesfull changed language.",
+  "lang_change_title": "Language change",
+  "flag_lang": "Language of names of countries has been succesfull changed.",
+  "new_lang": "Your new language is: ",
+  "flag_random": "Your random flag is: ",
+  "guess": "Guess what country is this flag. Answer write in chat.",
+  "answers_lang": "Your countries names should be in: ",
+  "good_answer": "Good job the answer is correct! You gained one point!",
+  "bad_answer": "Sadly the answer is not correct",
+  "timeout": "Time is gone! ",
+  "answer_is": "Correct answer is: ",
+  "flag_lang_change": "From now your countries names are in: ",
+  "player_points": "Your points: ",
+  "player_points_other": "Points of user ",
+  "guess_easy": "Guess what country's this flag is. Chose correct option.",
+  "hard_tittle": "Hard mode",
+  "zoom": "Zoom flag",
+  "good_luck": "Good Luck!",
+  "easy_tittle": "Easy mode",
+  "good_job": "Good job!",
+  "points": "Pooooints!??!?!"
+}
