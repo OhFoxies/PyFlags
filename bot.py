@@ -26,7 +26,11 @@ async def on_ready():
 async def easymode(interaction: nextcord.Interaction):
     gamer = player.Player(player_id=str(interaction.user.id))
     flag = random.choice(gamer.lang_flags)
-    view = EasyMode(correct=flag['name'], flags=gamer.lang_flags, player_lang=gamer.lang, flag_code=flag['code'])
+    view = EasyMode(correct=flag['name'],
+                    flags=gamer.lang_flags,
+                    player_lang=gamer.lang,
+                    flag_code=flag['code'],
+                    id_of_player=str(interaction.user.id))
     embed = nextcord.Embed(type="rich",
                            colour=nextcord.Colour.green(),
                            title=f"{gamer.lang['easy_tittle']}")
@@ -34,8 +38,17 @@ async def easymode(interaction: nextcord.Interaction):
                     value=f"{gamer.lang['flag_random']} :flag_{flag['code'].lower()}:\n"
                           f"{gamer.lang['guess_easy']}\n"
                           f"{gamer.lang['answers_lang']}**{gamer.langstr}**")
-
     await interaction.send(embed=embed, ephemeral=True, view=view)
+    try:
+        await bot.wait_for("interaction", timeout=15)
+    except asyncio.TimeoutError:
+        embed = nextcord.Embed(type="rich",
+                               colour=nextcord.Colour.red(),
+                               title=f"{gamer.lang['easy_tittle']}")
+        embed.add_field(name=f"{gamer.lang['timeout']}",
+                        value=f"{gamer.lang['answer_is']} {flag['name']}")
+        await interaction.send(embed=embed, ephemeral=True)
+        view.stop()
     await view.wait()
 
 
@@ -63,10 +76,10 @@ async def hardmode(interaction: nextcord.Interaction):
                     embed.add_field(name=f"{gamer.lang['good_job']}",
                                     value=f"{gamer.lang['good_answer']}")
                     await interaction.send(embed=embed, ephemeral=True)
-                    gamer.add_points(1)
+                    gamer.add_points(random.randint(5, 8))
                     break
                 embed = nextcord.Embed(type="rich",
-                                       colour=nextcord.Colour.green(),
+                                       colour=nextcord.Colour.red(),
                                        title=f"{gamer.lang['hard_tittle']}")
                 embed.add_field(name=f"{gamer.lang['bad_answer']}",
                                 value=f"{gamer.lang['answer_is']} {flag['name']}")
@@ -75,7 +88,7 @@ async def hardmode(interaction: nextcord.Interaction):
             continue
         except asyncio.TimeoutError:
             embed = nextcord.Embed(type="rich",
-                                   colour=nextcord.Colour.green(),
+                                   colour=nextcord.Colour.red(),
                                    title=f"{gamer.lang['hard_tittle']}")
             embed.add_field(name=f"{gamer.lang['timeout']}",
                             value=f"{gamer.lang['answer_is']} {flag['name']}")
