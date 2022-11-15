@@ -8,4 +8,10 @@ You need MySQL database you can configure it in `config.json` file.
 Then you just run the bot.py file and thats all!
 
 # To do
-Timeout on easy mode, medium mode, rewards and levels for points, removing buttons after game
+✓ Timeout on easy mode, 
+medium mode,
+levels for points,
+rewards for levels, 
+removing buttons after game
+
+
